@@ -1,0 +1,26 @@
+<ngb-accordion activeIds="static-1">
+	<ngb-panel id="static-1"  title="Novidades da MARVEL"></ngb-panel>
+</ngb-accordion>
+
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+	<li [ngbNavItem]="1">
+		<a ngbNavLink>Historias em Quadrinhos</a>
+		<ng-template ngbNavContent>
+			<app-details value = "comics"></app-details>
+		</ng-template>
+	</li>
+	<li [ngbNavItem]="2">
+		<a ngbNavLink>Eventos</a>
+		<ng-template ngbNavContent>
+			<app-details value = "events"></app-details>
+		</ng-template>
+	</li>
+  <li [ngbNavItem]="3">
+		<a ngbNavLink>Séries</a>
+		<ng-template ngbNavContent>
+			<app-details value = "series"></app-details>
+		</ng-template>
+	</li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
